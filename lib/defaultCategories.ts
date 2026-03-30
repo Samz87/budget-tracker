@@ -1,0 +1,16 @@
+export const DEFAULT_CATEGORIES = [
+  { name: "Salaire", type: "income" as const, color: "#10b981", icon: "💼" },
+  { name: "Freelance", type: "income" as const, color: "#3b82f6", icon: "💻" },
+  { name: "Investissements", type: "income" as const, color: "#8b5cf6", icon: "📈" },
+  { name: "Autres revenus", type: "income" as const, color: "#f59e0b", icon: "💰" },
+  { name: "Dons", type: "income" as const, color: "#f472b6", icon: "🎁" },
+  { name: "Paris", type: "income" as const, color: "#22c55e", icon: "🎰" },
+  { name: "Loyer", type: "expense" as const, color: "#ef4444", icon: "🏠" },
+  { name: "Courses", type: "expense" as const, color: "#f97316", icon: "🛒" },
+  { name: "Transport", type: "expense" as const, color: "#eab308", icon: "🚗" },
+  { name: "Restauration", type: "expense" as const, color: "#ec4899", icon: "🍽️" },
+  { name: "Santé", type: "expense" as const, color: "#14b8a6", icon: "🏥" },
+  { name: "Loisirs", type: "expense" as const, color: "#6366f1", icon: "🎮" },
+  { name: "Abonnements", type: "expense" as const, color: "#a855f7", icon: "📱" },
+  { name: "Autres dépenses", type: "expense" as const, color: "#6b7280", icon: "💸" },
+]

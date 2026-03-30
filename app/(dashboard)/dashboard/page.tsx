@@ -6,7 +6,7 @@ import { TransactionList } from "@/components/TransactionList"
 import { MonthNav } from "@/components/MonthNav"
 import { AddTransactionButton } from "@/components/AddTransactionButton"
 import { CategoryFilter } from "@/components/CategoryFilter"
-import { DEFAULT_CATEGORIES } from "@/app/actions/auth"
+import { DEFAULT_CATEGORIES } from "@/lib/defaultCategories"
 
 export default async function DashboardPage(props: {
   searchParams: Promise<{ month?: string; category?: string }>
