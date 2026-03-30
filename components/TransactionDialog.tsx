@@ -128,7 +128,7 @@ export function TransactionDialog({ categories, transaction, onClose }: Transact
               min="0.01"
               required
               defaultValue={transaction?.amount}
-              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm"
+              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm text-gray-900 bg-white placeholder:text-gray-400"
               placeholder="0.00"
             />
           </div>
@@ -142,7 +142,7 @@ export function TransactionDialog({ categories, transaction, onClose }: Transact
               name="categoryId"
               required
               defaultValue={transaction?.categoryId}
-              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm bg-white"
+              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm bg-white text-gray-900"
             >
               <option value="">Sélectionner une catégorie</option>
               {incomeCategories.length > 0 && (
@@ -174,7 +174,7 @@ export function TransactionDialog({ categories, transaction, onClose }: Transact
               name="date"
               required
               defaultValue={defaultDate}
-              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm"
+              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm text-gray-900 bg-white placeholder:text-gray-400"
             />
           </div>
 
@@ -187,7 +187,7 @@ export function TransactionDialog({ categories, transaction, onClose }: Transact
               type="text"
               name="description"
               defaultValue={transaction?.description || ""}
-              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm"
+              className="w-full px-4 py-2.5 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm text-gray-900 bg-white placeholder:text-gray-400"
               placeholder="Ex: Supermarché Carrefour"
             />
           </div>
@@ -214,7 +214,7 @@ export function TransactionDialog({ categories, transaction, onClose }: Transact
               id="recurringInterval"
               defaultValue={transaction?.recurringInterval || "monthly"}
               disabled={!transaction?.isRecurring}
-              className="w-full px-4 py-2 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm bg-white disabled:opacity-40"
+              className="w-full px-4 py-2 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500 text-sm bg-white text-gray-900 disabled:opacity-40"
             >
               {RECURRING_OPTIONS.map((o) => (
                 <option key={o.value} value={o.value}>
