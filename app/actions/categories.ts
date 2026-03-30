@@ -10,18 +10,28 @@ async function getUserId() {
   return session.user.id
 }
 
-export async function createCategory(formData: FormData) {
+export async function createCategory(
+  prevState: { error?: string } | undefined,
+  formData: FormData
+) {
   const userId = await getUserId()
 
-  await db.category.create({
-    data: {
-      name: formData.get("name") as string,
-      type: formData.get("type") as "income" | "expense",
-      color: (formData.get("color") as string) || "#6366f1",
-      icon: (formData.get("icon") as string) || "💰",
-      userId,
-    },
-  })
+  const name = (formData.get("name") as string)?.trim()
+  if (!name) return { error: "Le nom est requis" }
+
+  try {
+    await db.category.create({
+      data: {
+        name,
+        type: formData.get("type") as "income" | "expense",
+        color: (formData.get("color") as string) || "#6366f1",
+        icon: (formData.get("icon") as string) || "💰",
+        userId,
+      },
+    })
+  } catch {
+    return { error: "Une catégorie avec ce nom existe déjà" }
+  }
 
   revalidatePath("/")
 }
